@@ -114,7 +114,7 @@ function Content() {
                     <h1 className="my-4 text-white text-[18px] font-normal">DEVELOPERS →</h1>
                 </a>
                 <div className="md:flex md:justify-between flex-col justify-between">
-                    <div className="md:flex-row md:justify-between flex-col w-auto mr-4">
+                    <div className="sm:flex-row sm:justify-between flex-col sm:mr-4">
                         <div className="relative w-full mx-auto">
                             <img className="w-full object-cover min-h-[350px] rounded-[24px] border border-[#ffffff30]" src={developerImage} alt="apps image"/>
                             <div className="absolute inset-0 flex-col items-start justify-end self-end p-5 sm:p-6">
@@ -125,26 +125,28 @@ function Content() {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex justify-stretch mt-4 ">
-                             <button className=" text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
+                        <div className="sm:flex flex-col w-full my-4">
+                             <button className="flex w-full sm:w-1/2 justify-between text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
                                 <a target="_blank" href="https://uniswap.org/whitepaper-v3.pdf">
-                                        V3 Whitepaper ↗
+                                        V3 Whitepaper
                                 </a>
+                                <p> ↗</p>
                             </button>
-                            <button className="text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
+                            <button className="mt-4 flex w-full sm:w-1/2 justify-between text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
                                 <a target="_blank" href="https://github.com/Uniswap">
-                                        Github ↗
+                                        Github
                                 </a>
+                                <p>↗</p>
                             </button>
                         </div>
                     </div>
-                    <div className="bg-[#FFFFFF05] rounded-[24px] md:p-6 p-4 border border-[#ffffff30] md:w-auto">
-                        <div className="flex-col items-start justify-start p-6 ">
+                    <div className="bg-[#FFFFFF05] rounded-[24px] p-6 border border-[#ffffff30] md:w-auto">
+                        <div className="flex-col items-start justify-start">
                                 <img src={unigrants} alt="unigrants image" />
                                 <h3 className="text-white text-xl mt-4">Apply for funding from the Uniswap Grants Program</h3>
                                 <p className="text-xl text-[#FFFFFF99] font-light my-4">Get paid to build the future of finance. Uniswap Governance offers grant funding for people building apps, tools, and activities on the Uniswap Protocol.</p>
                                 <a target="_blank" href="https://www.uniswapfoundation.org/">
-                                    <button className="px-[12px] py-[10px] text-white bg-[#35373a] rounded-[10px]">Learn more ↗</button>
+                                    <button className="px-[12px] py-[10px] text-white bg-[#35373a] rounded-[12px]">Learn more ↗</button>
                                 </a>
                         </div>
                     </div>
@@ -160,7 +162,7 @@ function Content() {
                 <div className="">
                     <div className="md:mr-12">
                         <div className="relative w-full h-full mx-auto">
-                                <img className="w-full object-cover rounded-[24px] border border-[#ffffff30]" src={horseCard} alt="apps image"/>
+                                <img className="w-full object-cover min-h-[300px] max-h-[400px] rounded-[24px] border border-[#ffffff30]" src={horseCard} alt="apps image"/>
                                 <div className="absolute inset-0 flex-col h-full justify-evenly p-6">
                                     <div>
                                         <h3 className="text-white text-[32px] mb-4">Governed by the community.</h3>
