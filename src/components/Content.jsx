@@ -23,6 +23,11 @@ function Content() {
                                     Swap, earn, and build on the leading decentralized
                                     crypto trading protocol.
                             </p>
+                            <button className="min-[960px]:hidden px-2 py-3 rounded-lg cursor-pointer text-white bg-[#ff007a] mb-8">
+                                <a target="_blank" href="https://app.uniswap.org/" className="">
+                                    Launch App
+                                </a>
+                            </button>
                                 {/* icons */}
                                 <nav className="flex gap-4">
                                     <a href="https://twitter.com/Uniswap" target="_blank" rel="noopener noreferrer">
@@ -42,15 +47,13 @@ function Content() {
                                     </a>
                                     
                                 </nav>
-                                <a target="_blank" href="https://app.uniswap.org/" className="lg:invisible px-2 py-3 ml-4 rounded-lg cursor-pointer text-white bg-[#ff007a]">
-                                    Launch App
-                                </a>
+                                
                         </div>
                 </div> 
             </div>
 
             {/* second section */}
-            <div className="w-full bg-[#191b1f] bg-cover p-16 mb-32">
+            <div className="min-[960px]:block hidden w-full bg-[#191b1f] bg-cover p-16 mb-32">
 				<div className="flex justify-center">
 					<div className="flex w-2/3 justify-between items-center m-0 text-white">
 									<div className="flex flex-col items-center">
