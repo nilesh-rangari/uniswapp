@@ -1,6 +1,6 @@
 function Footer() {
     return(
-        <footer className="bg-[#191b1f] bg-cover flex justify-between items-cente p-8 mt-14"> 
+        <footer className="bg-[#191b1f] bg-cover w-screen flex justify-between items-cente p-8 mt-14"> 
             <div className="">
             <div className="">
                 <div className="mb-6">

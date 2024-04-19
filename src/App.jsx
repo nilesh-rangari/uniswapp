@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div className='bg-[#191b1f] bg-cover px-10 flex-col justify-center items-center'>
+    <div className='bg-[#191b1f] sm:px-10 flex-col justify-center items-center w-screen'>
       <Navbar/>
       <Content/>
       <Footer/>

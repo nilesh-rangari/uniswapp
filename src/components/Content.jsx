@@ -6,12 +6,12 @@ import horseCard from '../assets/horse-card.png';
 
 function Content() {
     return(
-        <main className="bg-[#191b1f] bg-cover h-full px-5">
+        <main className="bg-[#191b1f] w-screen h-full px-5">
             {/* first section */}
-            <div className="bg-[#191b1f] bg-cover h-screen w-full mx-auto flex justify-center mb-10">
-                <div className="absolute bg-cover bg-center h-screen w-full" style={{ backgroundImage: `url(${bgStars})` }}>
+            <div className="bg-[#191b1f] bg-cover h-screen w-full mx-auto flex justify-center mb-10 overflow-clip">
+                <div className="absolute bg-cover h-screen w-full overflow-clip" style={{ backgroundImage: `url(${bgStars})` }}>
                         <div className="absolute inset-0 flex flex-col justify-end items-start p-10">
-                            <h1 className="text-white text-[42px] sm:text-[56px] sm:w-full break-normal mb-5">
+                            <h1 className="text-white text-left text-[42px] sm:text-[56px] sm:w-full text-wrap mb-5">
                                 <span className="font-light mr-3 my-0">
                                     UNISWAP
                                 </span>
@@ -56,19 +56,19 @@ function Content() {
             <div className="min-[960px]:block hidden w-full bg-[#191b1f] bg-cover p-16 mb-32">
 				<div className="flex justify-center">
 					<div className="flex w-2/3 justify-between items-center m-0 text-white">
-									<div className="flex flex-col items-center">
+									<div className="flex flex-col items-center mr-3">
 										<span className="text-5xl font-bold">$1.8T+</span>
 										<p className="text-sm font-light mt-3">
 											Trade Volume
 										</p>
 									</div>
-									<div className="flex flex-col items-center">
+									<div className="flex flex-col items-center mr-3">
 										<span className="text-5xl font-bold">228M+</span>
 										<p className="text-sm font-light mt-3">
 											All Time Trades
 										</p>
 									</div>
-									<div className="flex flex-col items-center">
+									<div className="flex flex-col items-center mr-3">
 										<span className="text-5xl font-bold">300+</span>
 										<p className="text-sm font-light mt-3">
 											Integrations
@@ -85,8 +85,8 @@ function Content() {
 			</div>
 
             {/* 3rd section */}
-            <div className="mb-16 ">
-                <div className="flex justify-between items-center">
+            <div className="mb-16">
+                <div className="w-full min-[960px]:flex-row min-[960px]:justify-between min-[960px]:items-center flex-col justify-start items-start ">
                     <div className="w-full">
                         <a className="text-white text-[18px] font-normal " href="https://uniswap.org/ecosystem">UNISWAP ECOSYSTEM →</a>
                         <h1 className="max-w-[380px] text-white text-[32px] my-5">A growing network of DeFi Apps.</h1>
@@ -94,7 +94,7 @@ function Content() {
                             Developers, traders, and liquidity providers participate together in a financial marketplace that is open and accessible to all.
                         </p>
                     </div>
-                    <div className="relative max-w-xl mx-auto mr-3">
+                    <div className="relative min-[960px]:max-w-xl min-[960px]:mr-3 mx-auto mb-3 mt-8">
                         <img className="w-full object-cover min-h-[290px] rounded-[24px] border border-[#ffffff30]" src={apps} alt="apps image"/>
                         <div className="absolute inset-0 flex-col items-start justify-start p-6">
                             <h1 className="text-white text-5xl font-bold">300+</h1>
@@ -113,35 +113,32 @@ function Content() {
                 <a href="https://uniswap.org/developers">
                     <h1 className="my-4 text-white text-[18px] font-normal">DEVELOPERS →</h1>
                 </a>
-                <div className="flex justify-between">
-                    <div className="flex-col w-auto mr-4">
+                <div className="md:flex md:justify-between flex-col justify-between">
+                    <div className="md:flex-row md:justify-between flex-col w-auto mr-4">
                         <div className="relative w-full mx-auto">
-                            <img className="w-full object-cover rounded-[24px] border border-[#ffffff30]" src={developerImage} alt="apps image"/>
-                            {/* <div className="absolute inset-0 bg-[#191b1f] opacity-10"></div> */}
-                            <div className="absolute inset-0 flex-col items-start justify-end self-end p-8">
-                                <h3 className="text-white text-[32px] mb-4">Superpowers for DeFi developers.</h3>
-                                <p className="text-xl text-[#888D9B] font-light mb-4">Build Defi apps and tools on the largest crypto project on Ethereum. Get started with quick start guides, protocol documentation, a Javascript SDK, and fully open source code.</p>
+                            <img className="w-full object-cover min-h-[350px] rounded-[24px] border border-[#ffffff30]" src={developerImage} alt="apps image"/>
+                            <div className="absolute inset-0 flex-col items-start justify-end self-end p-5 sm:p-6">
+                                <h3 className="text-white text-[24px] md:text-[32px] mb-4">Superpowers for DeFi developers.</h3>
+                                <p className="text-[16px] md:text-xl text-[#888D9B] font-light mb-4">Build Defi apps and tools on the largest crypto project on Ethereum. Get started with quick start guides, protocol documentation, a Javascript SDK, and fully open source code.</p>
                                 <a target="_blank" href="https://docs.uniswap.org/">
-                                    <button className="px-[12px] py-[10px] text-white bg-[#35373a] rounded-[10px] text-[16px]">Documentation ↗</button>
+                                    <button className="px-[12px] py-[10px] text-white bg-[#35373a] rounded-[12px] text-[16px]">Documentation ↗</button>
                                 </a>
                             </div>
                         </div>
-                        <div className="flex mt-4 ">
-                            <div className="w-full">
-                            <a target="_blank" href="https://uniswap.org/whitepaper-v3.pdf">
-                                <button className=" text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
-                                    V3 Whitepaper ↗
-                                </button>
-                            </a>
-                            </div>
-                            <div className="w-full">
-                            <a target="_blank" href="https://github.com/Uniswap">
-                                <button className="text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">Github ↗</button>
-                            </a>
-                            </div>
+                        <div className="flex justify-stretch mt-4 ">
+                             <button className=" text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
+                                <a target="_blank" href="https://uniswap.org/whitepaper-v3.pdf">
+                                        V3 Whitepaper ↗
+                                </a>
+                            </button>
+                            <button className="text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
+                                <a target="_blank" href="https://github.com/Uniswap">
+                                        Github ↗
+                                </a>
+                            </button>
                         </div>
                     </div>
-                    <div className="bg-[#FFFFFF05] rounded-[24px] p-6 border border-[#ffffff30] w-2/5">
+                    <div className="bg-[#FFFFFF05] rounded-[24px] md:p-6 p-4 border border-[#ffffff30] md:w-auto">
                         <div className="flex-col items-start justify-start p-6 ">
                                 <img src={unigrants} alt="unigrants image" />
                                 <h3 className="text-white text-xl mt-4">Apply for funding from the Uniswap Grants Program</h3>
@@ -160,8 +157,8 @@ function Content() {
                 <a href="https://uniswap.org/governance">
                     <h1 className="my-4 text-white text-[18px] font-normal">PROTOCOL GOVERNANCE →</h1>
                 </a>
-                <div className="flex justify-between ">
-                    <div className="w-1/2 mr-12">
+                <div className="">
+                    <div className="md:mr-12">
                         <div className="relative w-full h-full mx-auto">
                                 <img className="w-full object-cover rounded-[24px] border border-[#ffffff30]" src={horseCard} alt="apps image"/>
                                 <div className="absolute inset-0 flex-col h-full justify-evenly p-6">
@@ -179,7 +176,7 @@ function Content() {
                                 </div>
                             </div>
                     </div>
-                    <div className="w-1/2 flex-col justify-evenly">
+                    <div className=" flex-col justify-evenly">
                         <div className="p-6 border border-[#ffffff30] bg-[#ffffff05] rounded-[20px]">
                                 <a target="_blank" href="https://gov.uniswap.org/">
                                     <button>
