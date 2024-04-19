@@ -6,10 +6,10 @@ import horseCard from '../assets/horse-card.png';
 
 function Content() {
     return(
-        <main className="bg-[#191b1f] w-screen h-full px-5">
+        <main className="bg-[#191b1f] w-full h-full">
             {/* first section */}
-            <div className="bg-[#191b1f] bg-cover h-screen w-full mx-auto flex justify-center mb-10 overflow-clip">
-                <div className="absolute bg-cover h-screen max-w-screen-lg w-full overflow-clip" style={{ backgroundImage: `url(${bgStars})` }}>
+            <div className="bg-[#191b1f]  h-screen w-full mx-auto flex justify-center mb-10">
+                <div className="absolute h-screen w-full overflow-clip" style={{ backgroundImage: `url(${bgStars})` }}>
                         <div className="absolute inset-0 flex flex-col justify-end items-start p-10">
                             <h1 className="text-white text-left text-[42px] sm:text-[56px] sm:w-full text-wrap mb-5">
                                 <span className="font-light mr-3 my-0">
@@ -28,7 +28,7 @@ function Content() {
                                     Launch App
                                 </a>
                             </button>
-                                {/* icons */}
+                                
                                 <nav className="flex gap-4">
                                     <a href="https://twitter.com/Uniswap" target="_blank" rel="noopener noreferrer">
                                     <svg className="h-6 fill-white" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@ function Content() {
             </div>
 
             {/* second section */}
-            <div className="min-[960px]:block hidden w-full bg-[#191b1f] bg-cover p-16 mb-32">
+            <div className="min-[960px]:block hidden w-full bg-[#191b1f] z-20 p-16 mb-32">
 				<div className="flex justify-center">
 					<div className="flex w-2/3 justify-between items-center m-0 text-white">
 									<div className="flex flex-col items-center mr-3">
@@ -125,7 +125,7 @@ function Content() {
                                 </a>
                             </div>
                         </div>
-                        <div className="sm:flex flex-col w-full my-4">
+                        <div className="md:flex flex-col w-full my-4">
                              <button className="flex w-full sm:w-1/2 justify-between text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
                                 <a target="_blank" href="https://uniswap.org/whitepaper-v3.pdf">
                                         V3 Whitepaper
@@ -159,10 +159,10 @@ function Content() {
                 <a href="https://uniswap.org/governance">
                     <h1 className="my-4 text-white text-[18px] font-normal">PROTOCOL GOVERNANCE →</h1>
                 </a>
-                <div className="">
-                    <div className="md:mr-12">
+                <div className="sm:flex">
+                    <div className="sm:mr-12 m-0">
                         <div className="relative w-full h-full mx-auto">
-                                <img className="w-full object-cover min-h-[300px] max-h-[400px] rounded-[24px] border border-[#ffffff30]" src={horseCard} alt="apps image"/>
+                                <img className="w-full object-cover min-h-[350px] max-h-[420px] rounded-[24px] border border-[#ffffff30]" src={horseCard} alt="apps image"/>
                                 <div className="absolute inset-0 flex-col h-full justify-evenly p-6">
                                     <div>
                                         <h3 className="text-white text-[32px] mb-4">Governed by the community.</h3>
@@ -178,7 +178,7 @@ function Content() {
                                 </div>
                             </div>
                     </div>
-                    <div className=" flex-col justify-evenly">
+                    <div className="flex-col justify-evenly">
                         <div className="p-6 border border-[#ffffff30] bg-[#ffffff05] rounded-[20px]">
                                 <a target="_blank" href="https://gov.uniswap.org/">
                                     <button>

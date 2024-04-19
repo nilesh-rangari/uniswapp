@@ -1,25 +1,25 @@
 function Footer() {
     return(
-        <footer className="bg-[#191b1f] bg-cover w-screen flex justify-between items-cente p-8 mt-14"> 
+        <footer className="bg-[#191b1f] bg-cover w-full sm:flex justify-between items-center p-5 mt-14"> 
             <div className="">
-            <div className="">
-                <div className="mb-6">
-                    <a href="/ecosystem" className="text-white text-sm mr-12">Ecosystem</a>
-                    <a href="/community" className="text-white text-sm mr-12">Community</a>
-                    <a href="/governance" className="text-white text-sm mr-12">Governance</a>
-                    <a href="/developers" className="text-white text-sm mr-12">Developers</a>
-                    <a href="https://blog.uniswap.org" className="text-white text-sm mr-12">Blog</a>
-                    <a href="/faq" className="text-white text-sm mr-12">FAQ</a>
-                    <a href="/privacy-policy" className="text-white text-sm mr-12">Privacy Policy</a>
-                    <a href="/trademark" className="text-white text-sm mr-12">Trademark Policy</a>
-                    <a href="/security" className="text-white text-sm mr-12">Security</a>
-                </div>
-                <div className="text-[#FFFFFF99] text-sm">Media inquires for Uniswap Labs - Contact:
-                    <a target="_blank" rel="noopener noreferrer" href="mailto:media@uniswap.org" className="text-white text-sm">media@uniswap.org</a>
+                <div className="">
+                    <div className="mb-6 gap-4 flex">
+                        <a href="/ecosystem" className="text-white text-sm mr-12">Ecosystem</a>
+                        <a href="/community" className="text-white text-sm mr-12">Community</a>
+                        <a href="/governance" className="text-white text-sm mr-12">Governance</a>
+                        <a href="/developers" className="text-white text-sm mr-12">Developers</a>
+                        <a href="https://blog.uniswap.org" className="text-white text-sm mr-12">Blog</a>
+                        <a href="/faq" className="text-white text-sm mr-12">FAQ</a>
+                        <a href="/privacy-policy" className="text-white text-sm mr-12">Privacy Policy</a>
+                        <a href="/trademark" className="text-white text-sm mr-12">Trademark Policy</a>
+                        <a href="/security" className="text-white text-sm mr-12">Security</a>
+                    </div>
+                    <div className="text-[#FFFFFF99] text-sm">Media inquires for Uniswap Labs - Contact:
+                        <a target="_blank" rel="noopener noreferrer" href="mailto:media@uniswap.org" className="text-white text-sm">media@uniswap.org</a>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-5">
                 <a href="https://discord.gg/FCfyBSbCU5" target="_blank" rel="noopener noreferrer">
                 <svg className="h-6 fill-white" viewBox="0 0 71 55" xmlns="http://www.w3.org/2000/svg">
                     <path d="M60.105 4.898A58.55 58.55 0 0 0 45.653.415a.22.22 0 0 0-.233.11 40.784 40.784 0 0 0-1.8 3.697c-5.456-.817-10.886-.817-16.23 0-.485-1.164-1.201-2.587-1.828-3.697a.228.228 0 0 0-.233-.11 58.386 58.386 0 0 0-14.451 4.483.207.207 0 0 0-.095.082C1.578 18.73-.944 32.144.293 45.39a.244.244 0 0 0 .093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 0 0 .249-.082 42.08 42.08 0 0 0 3.627-5.9.225.225 0 0 0-.123-.312 38.772 38.772 0 0 1-5.539-2.64.228.228 0 0 1-.022-.378c.372-.279.744-.569 1.1-.862a.22.22 0 0 1 .23-.03c11.619 5.304 24.198 5.304 35.68 0a.219.219 0 0 1 .233.027c.356.293.728.586 1.103.865a.228.228 0 0 1-.02.378 36.384 36.384 0 0 1-5.54 2.637.227.227 0 0 0-.121.315 47.249 47.249 0 0 0 3.624 5.897.225.225 0 0 0 .249.084c5.801-1.794 11.684-4.502 17.757-8.961a.228.228 0 0 0 .092-.164c1.48-15.315-2.48-28.618-10.497-40.412a.18.18 0 0 0-.093-.084Zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.438 3.24 6.382 7.156 0 3.945-2.827 7.156-6.381 7.156Zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.798 7.156-6.38 7.156Z"></path>
