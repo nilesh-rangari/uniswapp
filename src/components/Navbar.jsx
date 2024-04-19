@@ -1,6 +1,6 @@
 function Navbar() {
     return(
-        <header className="w-full px-5 py-6 h-[72px] max-w-[1600px] bg-[#191b1f] border-b border-[#191b1f] sticky top-0">
+        <header className="w-full px-5 py-6 h-[72px] max-w-[1600px] bg-[#191b1f] border-b border-[#191b1f] sticky top-0 z-30">
           <div className="flex justify-between">
             <div>
               <a href="https://uniswap.org/" className="">
