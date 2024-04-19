@@ -9,9 +9,9 @@ function Content() {
         <main className="bg-[#191b1f] bg-cover h-full px-5">
             {/* first section */}
             <div className="bg-[#191b1f] bg-cover h-screen w-full mx-auto flex justify-center mb-10">
-                <div className="relative bg-cover bg-center h-screen w-full" style={{ backgroundImage: `url(${bgStars})` }}>
+                <div className="absolute bg-cover bg-center h-screen w-full" style={{ backgroundImage: `url(${bgStars})` }}>
                         <div className="absolute inset-0 flex flex-col justify-end items-start p-10">
-                            <h1 className="text-white text-6xl mb-5">
+                            <h1 className="text-white text-[42px] sm:text-[56px] sm:w-full break-normal mb-5">
                                 <span className="font-light mr-3 my-0">
                                     UNISWAP
                                 </span>
