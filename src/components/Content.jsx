@@ -9,7 +9,7 @@ function Content() {
         <main className="bg-[#191b1f] w-screen h-full px-5">
             {/* first section */}
             <div className="bg-[#191b1f] bg-cover h-screen w-full mx-auto flex justify-center mb-10 overflow-clip">
-                <div className="absolute bg-cover h-screen w-full overflow-clip" style={{ backgroundImage: `url(${bgStars})` }}>
+                <div className="absolute bg-cover h-screen max-w-screen-lg w-full overflow-clip" style={{ backgroundImage: `url(${bgStars})` }}>
                         <div className="absolute inset-0 flex flex-col justify-end items-start p-10">
                             <h1 className="text-white text-left text-[42px] sm:text-[56px] sm:w-full text-wrap mb-5">
                                 <span className="font-light mr-3 my-0">
