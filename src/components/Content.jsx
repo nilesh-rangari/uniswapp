@@ -59,7 +59,7 @@ function Content() {
 
             <div className="bg-[#191b1f] h-screen w-full mx-auto flex justify-center mb-16 lg:mb-16">
                 <div className="absolute h-screen w-full bg-cover" style={{ backgroundImage: `url(${bgStars})` }}>
-                        <div className="absolute inset-0 flex flex-col justify-end items-start px-6 lg:p-20">
+                        <div className="absolute inset-0 flex flex-col justify-end items-start px-6 sm:px-14 lg:px-20">
                             <h1 className="text-white text-left text-[42px] sm:text-[56px] sm:w-full text-wrap mb-5">
                                 <span className="font-light mr-3 my-0">
                                     UNISWAP
@@ -216,7 +216,7 @@ function Content() {
                                 <img className="w-full object-cover min-h-[350px] rounded-[24px] border border-[#ffffff30]" src={horseCard} alt="apps image"/>
                                 <div className="absolute inset-0 flex flex-col justify-between h-full p-6">
                                     <div>
-                                        <h3 className="text-white text-[32px] mb-4">Governed by the community.</h3>
+                                        <h3 className="text-white text-[24px] lg:text-[32px] mb-4 pr-4">Governed by the community.</h3>
                                         <p className="text-xl text-[#888D9B] font-light mb-4">
                                             The Uniswap Protocol is managed by a global community of UNI token holders and delegates.
                                         </p>
