@@ -6,8 +6,9 @@ import horseCard from '../assets/horse-card.png';
 
 function Content() {
     return(
-        <main className="bg-[#191b1f] w-full h-full px-6 lg:px-20">
+        <main className="bg-[#191b1f] w-full h-full px-6 sm:px-14 lg:px-20">
             {/* className="bg-[#191b1f] w-full h-full" */}
+
             {/* first section */}
 
             {/* <div className="">
@@ -55,9 +56,10 @@ function Content() {
                 </div> 
             </div> */}
 
-            <div className="bg-[#191b1f]  h-screen w-full mx-auto flex justify-center mb-10">
-                <div className="absolute h-screen w-full overflow-clip" style={{ backgroundImage: `url(${bgStars})` }}>
-                        <div className="absolute inset-0 flex flex-col justify-end items-start px-6">
+
+            <div className="bg-[#191b1f] h-screen w-full mx-auto flex justify-center mb-16 lg:mb-16">
+                <div className="absolute h-screen w-full bg-cover" style={{ backgroundImage: `url(${bgStars})` }}>
+                        <div className="absolute inset-0 flex flex-col justify-end items-start px-6 lg:p-20">
                             <h1 className="text-white text-left text-[42px] sm:text-[56px] sm:w-full text-wrap mb-5">
                                 <span className="font-light mr-3 my-0">
                                     UNISWAP
@@ -101,7 +103,7 @@ function Content() {
 
 
             {/* second section */}
-            <div className="bg-[#191b1f] min-[960px]:block hidden">
+            <div className="bg-[#191b1f] min-[960px]:block hidden lg:mb-16">
             {/* className="min-[960px]:block hidden w-full bg-[#191b1f] z-20 p-16 mb-32" */}
 				<div className="flex justify-center">
 					<div className="flex w-2/3 justify-between items-center m-0 text-white">
@@ -134,7 +136,7 @@ function Content() {
 			</div>
 
             {/* 3rd section */}
-            <div className="mb-16">
+            <div className="mb-16 lg:mb-16">
                 <div className="w-full flex flex-col items-start justify-start min-[960px]:flex-row min-[960px]:items-center min-[960px]:justify-between">
                     <div className="w-full">
                         <a className="text-white text-[18px] font-normal " href="https://uniswap.org/ecosystem">UNISWAP ECOSYSTEM →</a>
@@ -158,7 +160,7 @@ function Content() {
 
             {/* 4th section */}
 
-            <div className="mb-14">
+            <div className="mb-16 lg:mb-16">
                 <a href="https://uniswap.org/developers">
                     <h1 className="my-4 text-white text-[18px] font-normal">DEVELOPERS →</h1>
                 </a>
@@ -174,7 +176,7 @@ function Content() {
                                 </a>
                             </div>
                         </div>
-                        <div className="my-4 lg:my-0 gap-4 flex w-full flex-col sm:flex-row sm:justify-between">
+                        <div className="mt-4 mb-4 lg:mt-4 lg:mb-0 gap-4 flex w-full flex-col sm:flex-row sm:justify-between">
                              <button className="flex w-full justify-between text-[20px] text-white bg-[#FFFFFF05] rounded-[20px] p-6 border border-[#ffffff30]">
                                 <a target="_blank" href="https://uniswap.org/whitepaper-v3.pdf">
                                         V3 Whitepaper
@@ -189,7 +191,7 @@ function Content() {
                             </button>
                         </div>
                     </div>
-                    <div className="bg-[#FFFFFF05] rounded-[24px] p-6 lg:p-0 border border-[#ffffff30] md:w-auto">
+                    <div className="bg-[#FFFFFF05] lg:max-w-[35%] rounded-[24px] p-6 lg:p-8 border border-[#ffffff30] md:w-auto">
                         <div className="flex-col items-start justify-start">
                                 <img src={unigrants} alt="unigrants image" />
                                 <h3 className="text-white text-xl mt-4">Apply for funding from the Uniswap Grants Program</h3>
@@ -204,7 +206,7 @@ function Content() {
 
             {/* 5th section */}
 
-            <div className="mb-14">
+            <div className="mb-16 lg:mb-16">
                 <a href="https://uniswap.org/governance">
                     <h1 className="my-4 text-white text-[18px] font-normal">PROTOCOL GOVERNANCE →</h1>
                 </a>

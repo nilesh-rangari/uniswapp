@@ -1,6 +1,6 @@
 function Footer() {
     return(
-        <footer className="bg-[#191b1f] flex flex-col justify-between px-6 lg:px-20">
+        <footer className="bg-[#191b1f] flex flex-col justify-between px-6 lg:px-20 lg-mt-16">
             <div className="flex flex-wrap">
                     <ul className="flex flex-col flex-wrap sm:flex-row sm:gap-4 sm:items-center">
                         <li className="mb-3 sm:mb-0">
