@@ -6,7 +6,7 @@ import horseCard from '../assets/horse-card.png';
 
 function Content() {
     return(
-        <main className="bg-[#191b1f] w-full h-full px-6 sm:px-14 lg:px-20">
+        <main className="bg-[#191b1f] max-w-[1600px] w-full h-full px-6 sm:px-14 lg:px-20">
             {/* className="bg-[#191b1f] w-full h-full" */}
 
             {/* first section */}
