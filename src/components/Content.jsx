@@ -1,8 +1,11 @@
+
 import bgStars from "../assets/glimmer_bg.svg";
 import apps from "../assets/apps.png";
 import developerImage from '../assets/developer.png';
 import unigrants from '../assets/unigrants.png';
 import horseCard from '../assets/horse-card.png';
+
+import { Link } from "react-router-dom";
 
 function Content() {
     return(
@@ -74,12 +77,13 @@ function Content() {
                                     Swap, earn, and build on the leading decentralized
                                     crypto trading protocol.
                             </p>
-                            <button className="min-[960px]:hidden px-2 py-3 rounded-lg cursor-pointer text-white bg-[#ff007a] mb-8">
-                                <a target="_blank" href="https://app.uniswap.org/" className="">
-                                    Launch App
-                                </a>
-                            </button>
-                                
+                            <Link to="/app">
+                                <button className="min-[960px]:hidden px-2 py-3 rounded-lg cursor-pointer text-white bg-[#ff007a] mb-8">
+                                    <a target="_blank" href="https://app.uniswap.org/" className="">
+                                        Launch App
+                                    </a>
+                                </button>
+                            </Link>
                                 <nav className="flex gap-4">
                                     <a href="https://twitter.com/Uniswap" target="_blank" rel="noopener noreferrer">
                                     <svg className="h-6 fill-white" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">

@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+
+
 function Navbar() {
     return(
         <header className="bg-[#191b1f] w-full px-0 lg:px-2 py-6 h-[72px] max-w-[1600px] border-b border-[#191b1f] sticky top-0 z-30">
@@ -16,10 +19,16 @@ function Navbar() {
                 <a className="px-4 py-4 text-[#a3a3a3] hover:text-white cursor-pointer" href="https://blog.uniswap.org">Blog</a>
                 <a className="px-4 py-4 text-[#a3a3a3] hover:text-white cursor-pointer" href="https://uniswap.org/faq">FAQ</a>
                 <a className="px-4 py-4 text-[#a3a3a3] hover:text-white cursor-pointer" href="https://boards.greenhouse.io/uniswaplabs" target="_blank">Jobs</a>
-                <a target="_blank" href="https://app.uniswap.org" className="px-2 py-3 ml-4 rounded-lg cursor-pointer text-white bg-[#ff007a]">Launch App</a>
+                <Link to="/app">
+                  <a target="_blank" href="https://app.uniswap.org" className="px-2 py-3 ml-4 rounded-lg cursor-pointer text-white bg-[#ff007a]">
+                    Launch App
+                  </a>
+                </Link>
               </nav>
               <div className="min-[960px]:hidden block">
-                <button className="px-[12px] py-[10px] text-white bg-[#35373a] rounded-[10px] text-[16px]">Menu</button>
+                <button className="px-[12px] py-[10px] text-white bg-[#35373a] rounded-[10px] text-[16px]">
+                  Menu
+                </button>
               </div>
             </div>
             </div>

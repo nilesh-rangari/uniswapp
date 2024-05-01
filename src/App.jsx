@@ -1,20 +1,27 @@
+import { BrowserRouter, Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import Home from './pages/Home'
+import AppLandingPage from './components/AppLandingPage'
+
 import './App.css'
-import Content from './components/Content'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+
 
 function App() {
   return (
     <div className='bg-[#191b1f] flex flex-col justify-center items-center'>
-      {/* className='bg-[#191b1f] px-10 flex-col justify-center items-center w-full' */}
       <div>
-        <Navbar/>
-        <Content/>
-        <Footer/>
-      </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home/>}></Route>
+            <Route path="/app" element={<AppLandingPage/>}></Route>
+          </Routes>
+        </BrowserRouter>
+        </div>
     </div>
   )
 }
 
 export default App
+
+    
 
