@@ -1,14 +1,23 @@
 import { useState } from "react"
 
 function AppLandingPage() {
-    const [inputValue, setInputValue] = useState(""); 
+    const [inputPayValue, setInputPayValue] = useState(""); 
+    const [inputReceiveValue, setInputReceiveValue] = useState(""); 
   
-    const handleChange = (event) => { 
+    const handlePayChange = (event) => { 
         const input = event.target.value;
         // Allow only numbers 
 
-        const numericValue = input.replace(/[^0-9]/g, ""); 
-        setInputValue(numericValue); 
+        const payValue = input.replace(/[^0-9]/g, ""); 
+        setInputPayValue(payValue); 
+    }; 
+
+    const handleReceiveChange = (event) => { 
+        const input = event.target.value;
+        // Allow only numbers 
+
+        const receiveValue = input.replace(/[^0-9]/g, ""); 
+        setInputReceiveValue(receiveValue); 
     }; 
 
 
@@ -31,8 +40,8 @@ function AppLandingPage() {
                             <div className="mt-1">
                               <input 
                                 type="text"
-                                value={inputValue}
-                                onChange={handleChange} 
+                                value={inputPayValue}
+                                onChange={handlePayChange} 
                                 className="w-full outline-none text-white text-left text-4xl font-[485] max-h-11 bg-[#1b1b1b] caret-white placeholder-[#363636]"
                                 placeholder="0" 
                               />
@@ -52,8 +61,8 @@ function AppLandingPage() {
                             <div className="mt-1">
                               <input 
                                 type="text"
-                                value={inputValue}
-                                onChange={handleChange} 
+                                value={inputReceiveValue}
+                                onChange={handleReceiveChange} 
                                 className="w-full outline-none text-white text-left text-4xl font-[485] max-h-11 bg-[#1b1b1b] caret-white placeholder-[#363636]"
                                 placeholder="0" 
                               />
