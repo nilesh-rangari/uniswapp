@@ -104,11 +104,20 @@ function AppLandingPage() {
 
                 <div className="flex flex-col justify-center items-center gap-6">
                     <div className="text-center w-full h-auto">
-                        <h1 className="text-4xl text-white flex flex-col min-[320px]:text-[36px] sm:text-[52px] md:text-[64px]">Swap anytime, <span className="leading-[120%]">anywhere.</span></h1>
+                        <h1 
+                            className="text-4xl text-white text-center flex flex-col min-[320px]:text-[36px] sm:text-[52px] md:text-[64px] animate-fade-up delay-100">
+                                <span className="flex justify-center text-center">
+                                    <span className="transition animate-fade-up delay-100"> Swap </span> 
+                                    <span className="transition animate-fade-up delay-300 ml-4"> anytime,</span>
+                                </span>
+                                <span className="leading-[120%] animate-fade-up delay-700">
+                                    anywhere.
+                                </span>
+                        </h1>
                     </div>
                     
                     {/* main container */}
-                    <div className="flex flex-col justify-center gap-1 items-center bg-[#131313] max-w-[480px] p-2 rounded-[24px]">
+                    <div className="flex flex-col justify-center gap-1 items-center bg-[#131313] max-w-[480px] p-2 rounded-[24px] animate-fade-up delay-1000">
                         
                         {/* first container  */}
                         <div className="rounded-[20px] p-4 min-h-11  bg-[#1b1b1b] h-[120px] w-full">
@@ -191,7 +200,7 @@ function AppLandingPage() {
                             <button className="w-full p-4 text-center bg-[rgb(49,28,49)] text-[rgb(252,114,255)] text-xl font-[535] rounded-[16px] hover:opacity-80">Connect Wallet</button>
                         </div>
                     </div>
-                    <div className="max-w-[480px] text-center px-6">
+                    <div className="max-w-[480px] text-center px-6 animate-fade-up delay-1000">
                         <p className="text-[rgb(125,125,125)] text-[14px] font-normal" >The largest onchain marketplace. Buy and sell crypto on Ethereum and 7+ other chains.</p>
                     </div>
                 </div>
