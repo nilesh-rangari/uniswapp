@@ -37,15 +37,31 @@ function AppLandingPage() {
                             <div>
                             <h1 className="text-[rgb(125,125,125)] text-[14px] font-normal">You pay</h1>
                             </div>
-                            <div className="mt-1">
-                              <input 
-                                type="text"
-                                value={inputPayValue}
-                                onChange={handlePayChange} 
-                                className="w-full outline-none text-white text-left text-4xl font-[485] max-h-11 bg-[#1b1b1b] caret-white placeholder-[#363636]"
-                                placeholder="0" 
-                              />
+                            
+                            <div className="flex justify-between items-center">
+                                <div className="mt-1">
+                                    <input 
+                                        type="text"
+                                        value={inputPayValue}
+                                        onChange={handlePayChange} 
+                                        className="w-full outline-none text-white text-left text-4xl font-[485] max-h-11 bg-[#1b1b1b] caret-white placeholder-[#363636]"
+                                        placeholder="0" 
+                                    />
+                                </div>
+                                {/* dropdown menu     */}
+                                <div className="">
+                                    <button 
+                                        id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom" 
+                                        className="text-white text-[24px] flex bg-[#131313] hover:bg-opacity-80 font-semibold rounded-full px-3 py-1 text-center items-center" 
+                                        type="button">
+                                            ETH
+                                        <svg className="w-3.5 h-3.5 ms-3 items-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
+                            
                             <div className="pt-2">
                                 <p className="text-[rgb(125,125,125)] text-[14px]">$23987646.45</p>
                             </div>
@@ -58,6 +74,8 @@ function AppLandingPage() {
                             <div>
                             <h1 className="text-[rgb(125,125,125)] text-[14px] font-normal">You receive</h1>
                             </div>
+
+                            <div className="flex justify-between items-center">
                             <div className="mt-1">
                               <input 
                                 type="text"
@@ -67,6 +85,20 @@ function AppLandingPage() {
                                 placeholder="0" 
                               />
                             </div>
+                            {/* dropdown menu     */}
+                                <div>
+                                    <button 
+                                        id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom" 
+                                        className="text-white flex text-[24px] bg-[#fc72ff] w-[200px] font-medium rounded-full px-3 py-1 text-center items-center" 
+                                        type="button">
+                                            Select Token
+                                        <svg className="w-3.5 h-3.5 ms-3 items-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
                             <div className="pt-2">
                                 <p className="text-[rgb(125,125,125)] text-[14px]">$23987646.45</p>
                             </div>
