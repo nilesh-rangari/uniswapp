@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import AppLandingPage from './components/AppLandingPage'
 
 import './App.css'
+import Pool from './pages/Pool';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/app" element={<AppLandingPage/>}></Route>
+            <Route path="/pool" element={<Pool/>}></Route>
           </Routes>
         </BrowserRouter>
         </div>
