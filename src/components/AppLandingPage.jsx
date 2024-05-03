@@ -99,9 +99,9 @@ function AppLandingPage() {
     return(
         <>
             <AppNavbar/>
-            <div className="w-screen h-screen flex flex-row justify-center items-center bg-[#171616]">       
+            <div className="w-screen h-screen flex flex-row justify-center items-start bg-[#171616] px-8">       
 
-                <div className="flex flex-col justify-center items-center gap-6">
+                <div className="flex flex-col justify-center items-center gap-6 mt-4">
                     <div className="text-center w-full h-auto">
                         <h1 
                             className="text-4xl text-white text-center flex flex-col min-[320px]:text-[36px] sm:text-[52px] md:text-[64px] animate-fade-up">
