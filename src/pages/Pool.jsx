@@ -1,4 +1,4 @@
-// import backgroundImg from '../assets/background.png'
+import backgroundImg from '../assets/background.png'
 
 function Pool() {
     return(
@@ -6,7 +6,9 @@ function Pool() {
             {/* main conatainer */}
             <div className="max-w-[640px] flex flex-col gap-5 items-center px-2">
                 <div 
-                    className="bg-cover bg-[url('../assets/background.png')] border border-[#222222] shadow-lg shadow-white-40 flex flex-col p-4 gap-3  rounded-[12px]">
+                    className="bg-cover border border-[#222222] shadow-lg shadow-white-40 flex flex-col p-4 gap-3  rounded-[12px]"
+                    style={{ backgroundImage: `url(${backgroundImg})` }}
+                    >
                     <div>
                         <h1 className="text-[16px] ">Liquidity provider rewards</h1>
                     </div>
