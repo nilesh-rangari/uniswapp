@@ -99,13 +99,12 @@ function AppLandingPage() {
     return(
         <>
             <AppNavbar/>
-            <div className="w-screen h-screen flex flex-row justify-center items-center bg-[#171616]">
-                
+            <div className="w-screen h-screen flex flex-row justify-center items-center bg-[#171616]">       
 
                 <div className="flex flex-col justify-center items-center gap-6">
                     <div className="text-center w-full h-auto">
                         <h1 
-                            className="text-4xl text-white text-center flex flex-col min-[320px]:text-[36px] sm:text-[52px] md:text-[64px] animate-fade-up delay-100">
+                            className="text-4xl text-white text-center flex flex-col min-[320px]:text-[36px] sm:text-[52px] md:text-[64px] animate-fade-up">
                                 <span className="flex justify-center text-center">
                                     <span className="transition animate-fade-up delay-100"> Swap </span> 
                                     <span className="transition animate-fade-up delay-300 ml-4"> anytime,</span>
@@ -146,7 +145,7 @@ function AppLandingPage() {
                                             >
                                                 ETH
                                             <svg className="w-3.5 h-3.5 ms-3 items-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                                             </svg>
                                         </button>
                                     </div>
