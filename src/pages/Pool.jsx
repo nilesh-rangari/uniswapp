@@ -16,14 +16,14 @@ function Pool() {
                         <h1 className="text-[16px] ">Liquidity provider rewards</h1>
                     </div>
                     <div>
-                    <p className="text-[14px]">
+                    <p className="text-[13px]">
                         Liquidity providers earn a 0.3% fee on all trades proportional to their share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
                     </p>
                     </div>
                     <div>
                     <a 
                         href="https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools"
-                        className="text-[14px] underline"
+                        className="text-[13px] underline"
                         
                     >
                         Read more about providing liquidity
