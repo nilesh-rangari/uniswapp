@@ -8,7 +8,6 @@ function AppLandingPage() {
     const [showModal, setShowModal] = useState(false);
   
     let toShow = showModal ? "block" : "hidden"
-    console.log(showModal)
     const handlePayChange = (event) => { 
         const input = event.target.value;
         // Allow only numbers 
@@ -99,7 +98,7 @@ function AppLandingPage() {
     return(
         <>
             <AppNavbar/>
-            <div className="w-screen h-screen flex flex-row justify-center items-start bg-[#171616] px-8">       
+            <div className="w-screen h-screen flex flex-row justify-center items-start bg-[#171616] px-8 py-12">       
 
                 <div className="flex flex-col justify-center items-center gap-6 mt-4">
                     <div className="text-center w-full h-auto">

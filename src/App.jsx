@@ -5,6 +5,7 @@ import AppLandingPage from './components/AppLandingPage'
 
 import './App.css'
 import Pool from './pages/Pool';
+import Swap from './pages/Swap';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home/>}></Route>
             <Route path="/app" element={<AppLandingPage/>}></Route>
             <Route path="/pool" element={<Pool/>}></Route>
+            <Route path='/swap'element={<Swap/>} ></Route>
           </Routes>
         </BrowserRouter>
         </div>

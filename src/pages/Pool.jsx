@@ -2,7 +2,7 @@ import backgroundImg from '../assets/background.png'
 
 function Pool() {
     return(
-        <div className="w-screen h-screen flex flex-row  text-white justify-center items-start bg-[#171616]">
+        <div className="w-screen h-screen flex flex-row text-white justify-center items-start bg-[#171616]">
             {/* main conatainer */}
             <div className="max-w-[640px] flex flex-col gap-5 items-center px-2">
                 <div 
