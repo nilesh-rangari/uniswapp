@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
-import Home from './pages/Home'
-import AppLandingPage from './components/AppLandingPage'
+
 
 import './App.css'
+import Home from './pages/Home'
+import AppLandingPage from './components/AppLandingPage'
 import Pool from './pages/Pool';
 import Swap from './pages/Swap';
 
