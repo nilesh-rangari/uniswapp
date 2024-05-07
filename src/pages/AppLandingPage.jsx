@@ -1,5 +1,5 @@
 import { useState } from "react"
-import AppNavbar from "./AppNavbar";
+import AppNavbar from "../components/AppNavbar";
 
 function AppLandingPage() {
     const [inputPayValue, setInputPayValue] = useState(""); 

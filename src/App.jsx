@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 
 import './App.css'
 import Home from './pages/Home'
-import AppLandingPage from './components/AppLandingPage'
+import AppLandingPage from './pages/AppLandingPage'
 import Pool from './pages/Pool';
 import Swap from './pages/Swap';
 
