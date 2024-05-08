@@ -46,6 +46,16 @@ function AppLandingPage() {
     
     let toShow = showModal ? "block" : "hidden"
 
+    useEffect(() => {
+        // Convert the value of coin1 to coin2
+        // Here you can use any conversion logic, for example, a simple ratio
+
+        ((coin2 === "Select token") && (inputPayValue!=="")) ? setInputReceiveValue((coinPrice*parseInt(inputPayValue))/coinPrice2) : null
+
+        const convertedValue = ((coinPrice*parseInt(inputPayValue))/coinPrice2) // Example: coin1 is twice the value of coin2
+        setInputReceiveValue(convertedValue);
+      }, [inputPayValue,coin2,coinPrice,coinPrice2]);
+
     const handlePayChange = (event) => { 
         const input = event.target.value;
         // Allow only numbers 
@@ -62,8 +72,6 @@ function AppLandingPage() {
         setInputReceiveValue(receiveValue); 
     }; 
     
-    ((coin2 === "Select token") && (inputPayValue!=="")) ? setInputReceiveValue((coinPrice*parseInt(inputPayValue))/coinPrice2) : null
-
     let modalContent = (<div className={`${toShow} fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50`}>
                             <div className="ablsolute p-5 w-full max-w-md max-h-full">
                                 {/* <!-- Modal content --> */}
@@ -280,7 +288,7 @@ function AppLandingPage() {
                                 <div className="flex justify-between items-center">
                                 <div className="mt-1">
                                 <input 
-                                    type="text"
+                                    type="number"
                                     value={inputReceiveValue}
                                     onChange={handleReceiveChange} 
                                     className="w-full outline-none text-white text-left text-4xl font-[485] max-h-11 bg-[#1b1b1b] caret-white placeholder-[#363636]"
