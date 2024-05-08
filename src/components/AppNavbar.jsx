@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 function AppNavbar(){
-  console.log("Nav Hai Yeh")
     return(
         <nav className="flex w-full flex-wrap justify-between bg-[#131313] items-center px-5 py-3 h-[70px] sticky top-0 z-[1020]">
             {/* w-screen h-screen flex flex-row justify-center items-center bg-[#171616] */}
