@@ -3,9 +3,17 @@ import AppNavbar from "../components/AppNavbar";
 
 function AppLandingPage() {
     const [inputPayValue, setInputPayValue] = useState(""); 
-    const [inputReceiveValue, setInputReceiveValue] = useState(""); 
-
+    const [inputReceiveValue, setInputReceiveValue] = useState("");
+    
     const [data, setData] = useState(null);
+
+    const [coin, setCoin] = useState("ETH")
+    const [coinPrice, setCoinPrice] = useState(0)
+
+    console.log(coin)
+    console.log(coinPrice)
+
+    
 
     
 
@@ -37,7 +45,7 @@ function AppLandingPage() {
         const input = event.target.value;
         // Allow only numbers 
 
-        const payValue = input.replace(/[^0-9]/g, ""); 
+        const payValue = input.replace(/[^0-9.]/g, ""); 
         setInputPayValue(payValue); 
     }; 
 
@@ -45,7 +53,7 @@ function AppLandingPage() {
         const input = event.target.value;
         // Allow only numbers 
 
-        const receiveValue = input.replace(/[^0-9]/g, ""); 
+        const receiveValue = input.replace(/[^0-9.]/g, ""); 
         setInputReceiveValue(receiveValue); 
     }; 
     
@@ -76,7 +84,7 @@ function AppLandingPage() {
                                         <p className="text-sm font-normal text-gray-400">Popular Tokens</p>
                                         <ul className="my-4 space-y-3">
                                         {(data != null) ? (data.map(coins => (
-                                            <li key={coins.id} >
+                                            <li key={coins.id} onClick={() => {setCoin(coins.symbol); setShowModal(false); setCoinPrice(coins.priceUsd) }}>
                                                 <a href="#" className="flex items-center p-3 text-base font-bold text-white rounded-lg bg-[#131313] hover:bg-[#1b1b1b] group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                                                     <svg aria-hidden="true" className="h-5" viewBox="0 0 292 292" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path 
@@ -140,6 +148,7 @@ function AppLandingPage() {
             <div className="w-screen h-screen flex flex-row justify-center items-start bg-[#171616] px-8 py-12">       
 
                 <div className="flex flex-col justify-center items-center gap-6 mt-4">
+                    {/* header container */}
                     <div className="text-center w-full h-auto">
                         <h1 
                             className="text-4xl text-white text-center flex flex-col min-[320px]:text-[36px] sm:text-[52px] md:text-[64px] animate-fade-up">
@@ -181,7 +190,7 @@ function AppLandingPage() {
                                             type="button"
                                             onClick={() => setShowModal(true)}
                                             >
-                                                ETH
+                                                {coin}
                                             <svg className="w-3.5 h-3.5 ms-3 items-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                                             </svg>
@@ -190,7 +199,9 @@ function AppLandingPage() {
                                 </div>
                                 
                                 <div className="pt-2">
-                                    <p className="text-[rgb(125,125,125)] text-[14px]">$23987646.45</p>
+                                    <p className="text-[rgb(125,125,125)] text-[14px]">
+                                        {(inputPayValue!=="") ? `$${(coinPrice*parseInt(inputPayValue))}` : ""}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +228,8 @@ function AppLandingPage() {
                                         <button 
                                             id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom" 
                                             className="text-white flex text-[20px] bg-[#fc72ff] min-w-[180px] font-medium rounded-full px-3 py-1 text-center items-center" 
-                                            type="button">
+                                            type="button"
+                                            >
                                                 Select Token
                                             <svg className="w-3.5 h-3.5 ms-3 items-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
