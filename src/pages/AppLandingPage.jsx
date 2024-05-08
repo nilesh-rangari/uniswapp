@@ -10,14 +10,13 @@ function AppLandingPage() {
     const [coin, setCoin] = useState("ETH")
     const [coinPrice, setCoinPrice] = useState(0)
 
-    console.log(coin)
-    console.log(coinPrice)
+    const [coin2, setCoin2] = useState("Select token")
+    const [coinPrice2, setCoinPrice2] = useState(0)
 
     
-
     
-
     const [showModal, setShowModal] = useState(false);
+    const [showModal2, setShowModal2] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,8 +38,14 @@ function AppLandingPage() {
     
         fetchData();
       }, []);
-  
+
+      useEffect(() => {
+
+      }, [])
+
+    
     let toShow = showModal ? "block" : "hidden"
+
     const handlePayChange = (event) => { 
         const input = event.target.value;
         // Allow only numbers 
@@ -57,6 +62,8 @@ function AppLandingPage() {
         setInputReceiveValue(receiveValue); 
     }; 
     
+    ((coin2 === "Select token") && (inputPayValue!=="")) ? setInputReceiveValue((coinPrice*parseInt(inputPayValue))/coinPrice2) : null
+
     let modalContent = (<div className={`${toShow} fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50`}>
                             <div className="ablsolute p-5 w-full max-w-md max-h-full">
                                 {/* <!-- Modal content --> */}
@@ -142,6 +149,63 @@ function AppLandingPage() {
 
     let displayModal = showModal ? modalContent : null
 
+    let toShow2 = showModal2 ? "block" : "hidden"
+
+
+    let modalContent2 = (<div className={`${toShow2} fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50`}>
+                            <div className="ablsolute p-5 w-full max-w-md max-h-full">
+                                {/* <!-- Modal content --> */}
+                                <div className="relative rounded-lg shadow bg-[#131313]">
+                                    {/* <!-- Modal header --> */}
+                                    <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-[#9b9b9b]">
+                                        <h3 className="text-lg font-semibold text-white">
+                                            Select a token
+                                        </h3>
+                                        <button type="button" 
+                                                className="text-white bg-transparent hover:text-[#9b9b9b] rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center "
+                                                data-modal-toggle="crypto-modal"
+                                                onClick={()=> setShowModal(false)}>
+                                            <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                            </svg>
+                                            <span className="sr-only">Close modal</span>
+                                        </button>
+                                    </div>
+                                     {/* <!-- Modal body --> */}
+                                     <div 
+                                        className="p-4 md:p-5 max-h-[400px] overflow-y-scroll"
+                                        style={{ scrollbarWidth: 'none'}}
+                                        >
+                                        <p className="text-sm font-normal text-gray-400">Popular Tokens</p>
+                                        <ul className="my-4 space-y-3">
+                                        {(data != null) ? (data.map(coins => (
+                                            <li key={coins.id} onClick={() => {setCoin2(coins.symbol); setShowModal2(false); setCoinPrice2(coins.priceUsd) }}>
+                                                <a href="#" className="flex items-center p-3 text-base font-bold text-white rounded-lg bg-[#131313] hover:bg-[#1b1b1b] group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                                                    <svg aria-hidden="true" className="h-5" viewBox="0 0 292 292" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path 
+                                                            d="M145.7 291.66C226.146 291.66 291.36 226.446 291.36 146C291.36 65.5541 226.146 0.339844 145.7 0.339844C65.2542 0.339844 0.0400391 65.5541 0.0400391 146C0.0400391 226.446 65.2542 291.66 145.7 291.66Z" 
+                                                            fill="#3259A5"/>
+                                                        <path d="M195.94 155.5C191.49 179.08 170.8 196.91 145.93 196.91C117.81 196.91 95.0204 174.12 95.0204 146C95.0204 117.88 117.81 95.0897 145.93 95.0897C170.8 95.0897 191.49 112.93 195.94 136.5H247.31C242.52 84.7197 198.96 44.1797 145.93 44.1797C89.6904 44.1797 44.1104 89.7697 44.1104 146C44.1104 202.24 89.7004 247.82 145.93 247.82C198.96 247.82 242.52 207.28 247.31 155.5H195.94Z" 
+                                                        fill="white"/>
+                                                    </svg>
+                                                    <div className="flex flex-col ">
+                                                        <span className="flex-1 ms-3 whitespace-nowrap font-light text-[16px] text-white">{coins.id}</span>
+                                                        <span className="flex-1 ms-3 whitespace-nowrap font-light text-[12px] text-[#9b9b9b]">{coins.symbol}</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        ))) : ""}
+                                        </ul>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>)
+
+    let displayModal2 = showModal2 ? modalContent2 : null
+
+    let buttonStyleChange = (coin2 !== "Select token") ? "bg-[#131313] hover:bg-opacity-80 font-semibold" : "bg-[#fc72ff] min-w-[180px]"
+
     return(
         <>
             <AppNavbar/>
@@ -182,7 +246,7 @@ function AppLandingPage() {
                                             placeholder="0" 
                                         />
                                     </div>
-                                    {/* dropdown menu     */}
+                                    {/* dropdown menu   */}
                                     <div className="">
                                         <button 
                                             id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom" 
@@ -227,10 +291,11 @@ function AppLandingPage() {
                                     <div>
                                         <button 
                                             id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom" 
-                                            className="text-white flex text-[20px] bg-[#fc72ff] min-w-[180px] font-medium rounded-full px-3 py-1 text-center items-center" 
+                                            className={`${buttonStyleChange} text-white flex text-[20px] font-medium rounded-full px-3 py-1 text-center items-center`} 
                                             type="button"
+                                            onClick={() => setShowModal2(true)}
                                             >
-                                                Select Token
+                                                {coin2}
                                             <svg className="w-3.5 h-3.5 ms-3 items-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                                             </svg>
@@ -239,7 +304,9 @@ function AppLandingPage() {
                                 </div>
 
                                 <div className="pt-2">
-                                    <p className="text-[rgb(125,125,125)] text-[14px]">$23987646.45</p>
+                                    <p className="text-[rgb(125,125,125)] text-[14px]">
+                                        {(inputPayValue!=="") ? `$${(coinPrice*parseInt(inputPayValue))}` : ""}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +321,7 @@ function AppLandingPage() {
                     </div>
                 </div>
                 {displayModal}
-                
+                {displayModal2}
             </div>
         </>
     )
